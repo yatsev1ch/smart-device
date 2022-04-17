@@ -14,6 +14,7 @@ const del = require('del');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
 const gcmq = require('gulp-group-css-media-queries');
+const terser = require('gulp-terser');
 
 const css = () => {
   return gulp.src('source/sass/style.scss')
@@ -33,10 +34,13 @@ const css = () => {
 };
 
 const js = () => {
-  return gulp.src(['source/js/main.js'])
-      .pipe(webpackStream(webpackConfig))
-      .pipe(gulp.dest('build/js'))
-};
+  return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(rename( (file) => {
+      file.basename += '.min';
+    }))
+    .pipe(gulp.dest('build/js'));
+}
 
 const svgo = () => {
   return gulp.src('source/img/**/*.{svg}')
@@ -72,6 +76,8 @@ const copyImages = () => {
 const copy = () => {
   return gulp.src([
     'source/**.html',
+    'source/**.ico',
+    'source/**.webmanifest',
     'source/fonts/**',
     'source/img/**',
     'source/favicon/**',
@@ -88,7 +94,7 @@ const clean = () => {
 const syncServer = () => {
   server.init({
     server: 'build/',
-    index: 'sitemap.html',
+    index: 'index.html',
     notify: false,
     open: true,
     cors: true,

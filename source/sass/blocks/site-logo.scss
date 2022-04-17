@@ -1,0 +1,39 @@
+.site-logo {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(2, auto);
+  text-decoration: none;
+  color: $white-basic;
+  flex-shrink: 0;
+  justify-content: start;
+  align-content: start;
+  cursor: unset;
+  pointer-events: none;
+
+  &::before {
+    content: "Smart Device";
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 100%;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    margin-top: 7px;
+    margin-bottom: 1px;
+  }
+
+  &::after {
+    content: "умные технологии";
+    margin: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+    color: $gray-footer-border;
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 500;
+  }
+}
+
+.site-logo__image {
+  grid-row: 1 / 4;
+  display: block;
+  margin-right: 15px;
+}

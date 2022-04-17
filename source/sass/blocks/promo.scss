@@ -1,0 +1,123 @@
+.promo {
+  min-height: $dsk-promo-height;
+  background-image: url("../img/backgrounds/promo-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $blue-background;
+
+  @media (min-width: $tbl-breakpoint) and (min-resolution: 2dppx) {
+    background-image: url("../img/backgrounds/promo-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tbl-breakpoint) {
+    min-height: $tbl-promo-height;
+    background-image: url("../img/backgrounds/promo-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/promo-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    min-height: $mbl-promo-height;
+    background-image: url("../img/backgrounds/promo-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/promo-mobile@2x.jpg");
+    }
+  }
+}
+
+.promo__wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: $dsk-wrapper-width;
+  padding: $dsk-header-offset 125px 20px;
+
+  @media (max-width: $tbl-breakpoint) {
+    padding: $tbl-header-offset 0 20px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    padding-top: $mbl-header-offset;
+  }
+}
+
+.promo__header {
+  margin-top: 0;
+  margin-bottom: 38px;
+  font-family: $roboto-c;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 100%;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+
+  @media (max-width: $tbl-breakpoint) {
+    font-size: 64px;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    font-size: 36px;
+    letter-spacing: 2px;
+    line-height: 120%;
+    margin-bottom: 6px;
+  }
+}
+
+.promo p {
+  margin-top: 0;
+  margin-bottom: 47px;
+  font-size: 22px;
+  line-height: 155%;
+
+  @media (max-width: $tbl-breakpoint) {
+    margin-bottom: 57px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    font-size: 14px;
+    line-height: 155%;
+    margin-bottom: 44px;
+  }
+
+  & br {
+    @media (max-width: $tbl-breakpoint) {
+      display: none;
+    }
+  }
+}
+
+.promo__button {
+  font-size: 18px;
+  line-height: 100%;
+  padding: 17px 26px 20px;
+  user-select: none;
+
+  @media (max-width: $tbl-breakpoint) {
+    margin-left: 45px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    margin: 0;
+    font-size: 14px;
+    padding: 13px 34px;
+  }
+
+  & span {
+    @media (max-width: $mbl-breakpoint) {
+      display: none;
+    }
+  }
+
+  &::before {
+    @media (max-width: $mbl-breakpoint) {
+      content: "бесплатная консультация";
+    }
+  }
+}

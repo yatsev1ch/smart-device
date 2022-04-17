@@ -1,0 +1,19 @@
+.button {
+  display: block;
+  box-sizing: border-box;
+  color: $white-basic;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $blue-basic;
+  font-family: $roboto-c;
+  font-weight: 700;
+  border-radius: 3px;
+  font-kerning: normal;
+  letter-spacing: 1px;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $blue-basic;
+  }
+}

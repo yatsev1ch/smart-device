@@ -1,0 +1,173 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding-right: 10px;
+  align-items: flex-start;
+
+  @media (max-width: $tbl-breakpoint) {
+    padding-right: 0;
+  }
+}
+
+.form input:not([type="checkbox"]),
+.form textarea {
+  display: block;
+  box-sizing: border-box;
+  background-color: $blue-input;
+  border: none;
+  padding: 15px 15px 17px 15px;
+  border-radius: 3px;
+  color: $white;
+
+  @media (max-width: $mbl-breakpoint) {
+    padding: 15px 15px 16px 15px;
+    flex-basis: 60%;
+    flex-grow: 1;
+  }
+
+  &::placeholder {
+    color: $white-basic-opacity-70;
+  }
+}
+
+.form input:not([type="checkbox"]) {
+  flex-grow: 1;
+  margin-right: 31px;
+  margin-bottom: 20px;
+
+  @media (max-width: $tbl-breakpoint) {
+    margin-right: 30px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    margin-right: 0;
+  }
+
+  &:nth-of-type(2) {
+    margin-right: 0;
+  }
+}
+
+.form textarea {
+  width: 100%;
+  padding-top: 25px;
+  min-height: 155px;
+  margin-bottom: 34px;
+  resize: none;
+
+  @media (max-width: $tbl-breakpoint) {
+    padding-top: 32px;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    min-height: 181px;
+    padding-top: 26px;
+    margin-bottom: 30px;
+  }
+}
+
+.form button {
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  border: none;
+  background-color: $blue-section;
+  font-family: $roboto-c;
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 18px 69px 12px;
+  border-radius: 3px;
+  color: $white;
+  letter-spacing: 1px;
+  margin-right: 49px;
+
+  @media (max-width: $tbl-breakpoint) {
+    padding: 18px 67px 11px 70px;
+    margin-right: 84px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    margin-right: 0;
+    min-width: 270px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.form input[type="checkbox"] + label {
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  position: relative;
+  order: 1;
+  flex-basis: 40%;
+  font-size: 14px;
+  line-height: 120%;
+  padding: 16px 12px 12px 26px;
+  color: $white-basic-opacity-70;
+
+  @media (max-width: $tbl-breakpoint) {
+    padding: 10px 12px 12px 26px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    flex-basis: unset;
+    padding: 10px 12px 12px 31px;
+  }
+
+  &::before {
+    content: "";
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    border: 1px solid $white;
+    border-radius: 3px;
+    left: 0;
+    top: 23px;
+
+    @media (max-width: $tbl-breakpoint) {
+      top: 17px;
+      left: 1px;
+    }
+
+    @media (max-width: $mbl-breakpoint) {
+      left: 5px;
+      height: 14px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    height: 6px;
+    width: 11px;
+    position: absolute;
+    left: 2px;
+    top: 27px;
+    background-image: url("../img/svg/checked-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (max-width: $tbl-breakpoint) {
+      left: 3px;
+      top: 21px;
+    }
+
+    @media (max-width: $mbl-breakpoint) {
+      left: 7px;
+      top: 20px;
+    }
+  }
+}
+
+.form input[type="checkbox"]:checked + label {
+  &::after {
+    display: block;
+  }
+}

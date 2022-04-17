@@ -1,0 +1,116 @@
+.about__wrapper {
+  box-sizing: border-box;
+  padding: 49px 0 34px;
+  max-width: $dsk-wrapper-width;
+  margin: 0 auto;
+  display: grid;
+  align-items: start;
+  justify-items: start;
+  grid-template-columns: auto 1fr;
+
+  @media (max-width: $tbl-breakpoint) {
+    padding: 10px 0 79px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    padding: 15px 0 79px;
+  }
+
+  &::before {
+    content: "";
+    grid-column: 1;
+    grid-row: 1 / 5;
+    background-image: url("../img/content/about-year.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 150px;
+    height: 320px;
+    margin-right: 100px;
+
+    @media (min-resolution: 2dpi) {
+      background-image: url("../img/content/about-year@2x.png");
+    }
+
+    @media (max-width: $tbl-breakpoint) {
+      grid-row: 1 / 4;
+      margin: 4px 30px 0 -4px;
+    }
+
+    @media (max-width: $mbl-breakpoint) {
+      display: none;
+    }
+  }
+}
+
+.about__header {
+  grid-column: 2;
+  color: $blue-section;
+  font-family: $roboto-c;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 36px;
+  margin-top: 1px;
+  margin-bottom: 13px;
+
+  @media (max-width: $tbl-breakpoint) {
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    font-size: 28px;
+  }
+}
+
+.about p {
+  grid-column: 2;
+  color: $blue-section;
+  line-height: 135%;
+  margin-top: 0;
+  margin-bottom: 39px;
+  overflow: hidden;
+  max-height: 152px;
+
+  &.opened {
+    max-height: unset;
+  }
+
+  &.closed + button,
+  &.opened + button {
+    display: block;
+  }
+
+  @media (max-width: $tbl-breakpoint) {
+    margin-bottom: 18px;
+    max-height: 259px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    font-size: 14px;
+    max-height: 204px;
+  }
+}
+
+.about__button {
+  display: none;
+  grid-column: 2;
+  background-color: transparent;
+  border: 1px solid $blue-basic;
+  text-transform: uppercase;
+  color: $blue-basic;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 13px 51px 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+
+  @media (max-width: $mbl-breakpoint) {
+    padding: 8px 41px 9px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $blue-basic;
+    color: $white-basic;
+  }
+}

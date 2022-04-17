@@ -1,0 +1,89 @@
+.feedback {
+  background-color: $blue-feedback;
+  background-image: $feedback-gradient;
+
+  @media (max-width: $tbl-breakpoint) {
+    background-image: none;
+  }
+}
+
+.feedback__wrapper {
+  margin: 0 auto;
+  padding: 166px 0 234px;
+  box-sizing: border-box;
+  max-width: $dsk-wrapper-width;
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: 1fr 590px;
+
+  @media (max-width: $tbl-breakpoint) {
+    grid-template-columns: 1fr;
+    padding: 46px 0 115px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    padding: 47px 0 74px;
+  }
+
+  &::before {
+    content: "";
+    box-sizing: border-box;
+    background-image: url("../../img/content/paper-plane.png");
+    background-repeat: no-repeat;
+    grid-column: 1;
+    grid-row: 1 / 4;
+    background-size: contain;
+    max-width: 510px;
+    max-height: 285px;
+    margin-top: 80px;
+
+    @media (max-width: $tbl-breakpoint) {
+      display: none;
+    }
+  }
+}
+
+.feedback__header {
+  margin: 0 0 12px -5px;
+  grid-column: 2;
+  font-size: 36px;
+  line-height: 140%;
+  font-weight: 400;
+  font-family: $roboto-c;
+  color: $white;
+
+  @media (max-width: $tbl-breakpoint) {
+    grid-column: 1;
+    margin: 0 0 7px 0;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+}
+
+.feedback p {
+  margin-top: 0;
+  margin-bottom: 35px;
+  grid-column: 2;
+  line-height: 135%;
+  color: $white;
+
+  @media (max-width: $tbl-breakpoint) {
+    grid-column: 1;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    font-size: 14px;
+    margin-bottom: 34px;
+    max-width: 200px;
+  }
+}
+
+.feedback__wrapper form {
+  @media (max-width: $tbl-breakpoint) {
+    grid-column: 1;
+  }
+}
