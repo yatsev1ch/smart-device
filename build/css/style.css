@@ -1239,7 +1239,7 @@ template {
   content: "";
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background-image: url("../../img/content/paper-plane.png");
+  background-image: url("../img/content/paper-plane.png");
   background-repeat: no-repeat;
   -ms-grid-column: 1;
   grid-column: 1;
@@ -2157,13 +2157,13 @@ template {
 
   .accordion__header--opened::after {
     display: block;
-    background-image: url("../../img/svg/minus-icon.svg");
+    background-image: url("../img/svg/minus-icon.svg");
   }
 
   .accordion__header--closed::after {
     display: block;
     right: 1px;
-    background-image: url("../../img/svg/plus-icon.svg");
+    background-image: url("../img/svg/plus-icon.svg");
   }
 
   .accordion__header--closed ~ .accordion__content {

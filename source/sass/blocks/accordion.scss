@@ -16,7 +16,7 @@
   &--opened::after {
     @media (max-width: $mbl-breakpoint) {
       display: block;
-      background-image: url("../../img/svg/minus-icon.svg");
+      background-image: url("../img/svg/minus-icon.svg");
     }
   }
 
@@ -24,7 +24,7 @@
     @media (max-width: $mbl-breakpoint) {
       display: block;
       right: 1px;
-      background-image: url("../../img/svg/plus-icon.svg");
+      background-image: url("../img/svg/plus-icon.svg");
     }
   }
 
