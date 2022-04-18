@@ -410,14 +410,6 @@ template {
   src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff");
 }
 
-@font-face {
-  font-family: "Roboto";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("../fonts/roboto-medium.woff") format("woff");
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -514,7 +506,7 @@ template {
   box-sizing: border-box;
   border: none;
   background-color: #041827;
-  font-family: "Roboto COndensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 16px;
   line-height: 100%;
   font-weight: 700;
@@ -610,7 +602,7 @@ template {
   margin-top: 0;
   margin-bottom: 15px;
   letter-spacing: 0;
-  font-family: "Roboto COndensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
 }
 
 .modal p {
@@ -703,7 +695,7 @@ template {
   text-decoration: none;
   text-transform: uppercase;
   background-color: #00b2ff;
-  font-family: "Roboto COndensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   border-radius: 3px;
   -webkit-font-kerning: normal;
@@ -896,7 +888,7 @@ template {
   -webkit-box-ordinal-group: 6;
   -ms-flex-order: 5;
   order: 5;
-  font-family: "Roboto COndensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
@@ -951,7 +943,7 @@ template {
 .promo__header {
   margin-top: 0;
   margin-bottom: 38px;
-  font-family: "Roboto COndensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 80px;
   line-height: 100%;
@@ -1036,7 +1028,7 @@ template {
   color: #00b2ff;
   font-size: 24px;
   line-height: 140%;
-  font-family: "Roboto COndensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   margin: 0;
   margin-bottom: 12px;
@@ -1083,7 +1075,7 @@ template {
   -ms-grid-column: 2;
   grid-column: 2;
   color: #041827;
-  font-family: "Roboto COndensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   line-height: 140%;
   font-size: 36px;
@@ -1149,7 +1141,7 @@ template {
 }
 
 .catalog p {
-  font-family: "Roboto COndensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 140%;
@@ -1221,7 +1213,7 @@ template {
 }
 
 .catalog__product-header {
-  font-family: "Roboto COndensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
@@ -1278,7 +1270,7 @@ template {
   font-size: 36px;
   line-height: 140%;
   font-weight: 400;
-  font-family: "Roboto COndensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #ffffff;
 }
 
@@ -1371,7 +1363,7 @@ template {
 
 .page-footer__nav-header,
 .page-footer__contacts-header {
-  font-family: "Roboto COndensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 15px;
   line-height: 16px;
   text-transform: uppercase;
@@ -2135,7 +2127,7 @@ template {
     grid-column: 1;
     -ms-grid-row: 2;
     grid-row: 2;
-    padding: 11px 10px 0 10px;
+    padding: 11px 10px 0 13px;
     margin-bottom: 29px;
     -ms-grid-column-align: center;
     justify-self: center;

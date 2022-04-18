@@ -65,10 +65,9 @@
   }
 
   @media (max-width: $mbl-breakpoint) {
-    $right-padding: $mbl-container-padding + 3;
     grid-column: 1;
     grid-row: 2;
-    padding: 11px 10px 0 10px;
+    padding: 11px 10px 0 13px;
     margin-bottom: 29px;
     justify-self: center;
     max-width: 220px;
