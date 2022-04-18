@@ -62,7 +62,7 @@ const getFirstNumber = (string) => {
 };
 
 const getNumber = (string) => {
-  const sliced = string.slice(4);
+  const sliced = string.slice(4, 11);
   return sliced ? `)${sliced}` : '';
 };
 
