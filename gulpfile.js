@@ -73,6 +73,15 @@ const copyImages = () => {
       .pipe(gulp.dest('build'));
 };
 
+const optimizeImages = () => {
+  return gulp.src('build/img/**/*.{png,jpg}')
+      .pipe(imagemin([
+        imagemin.optipng({optimizationLevel: 3}),
+        imagemin.mozjpeg({quality: 75, progressive: true}),
+      ]))
+      .pipe(gulp.dest('build/img'));
+};
+
 const copy = () => {
   return gulp.src([
     'source/**.html',
@@ -119,7 +128,7 @@ const refresh = (done) => {
   done();
 };
 
-const build = gulp.series(clean, svgo, copy, css, sprite, js);
+const build = gulp.series(clean, svgo, copy, css, sprite, js, optimizeImages);
 
 const start = gulp.series(build, syncServer);
 
@@ -139,14 +148,7 @@ const createWebp = () => {
     .pipe(gulp.dest(`source/img/${root}`));
 };
 
-const optimizeImages = () => {
-  return gulp.src('build/img/**/*.{png,jpg}')
-      .pipe(imagemin([
-        imagemin.optipng({optimizationLevel: 3}),
-        imagemin.mozjpeg({quality: 75, progressive: true}),
-      ]))
-      .pipe(gulp.dest('build/img'));
-};
+
 
 exports.imagemin = optimizeImages;
 exports.webp = createWebp;
