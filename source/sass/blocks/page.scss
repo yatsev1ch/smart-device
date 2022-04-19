@@ -3,6 +3,10 @@
   scroll-behavior: smooth;
   scroll-padding-top: $dsk-header-height;
 
+  @media (max-width: $tbl-breakpoint) {
+    scroll-padding-top: 0;
+  }
+
   &--with-modal {
     overflow: hidden;
   }

@@ -1569,6 +1569,10 @@ template {
     top: 21px;
   }
 
+  .page {
+    scroll-padding-top: 0;
+  }
+
   .page-header {
     position: absolute;
     min-height: 100px;
