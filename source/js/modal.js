@@ -67,7 +67,10 @@ const getNumber = (string) => {
 };
 
 const handleInput = (input) => {
-  const clearString = [...input.value].filter((char) => NUMBER_EXPRESSION.test(char)).join('');
+  let clearString = [...input.value].filter((char) => NUMBER_EXPRESSION.test(char)).join('');
+  if (clearString.length === 1 && clearString[0] !== '7') {
+    clearString = '7' + clearString;
+  }
   const finalString = `${getFirstNumber(clearString)}${getCodeFrom(clearString)}${getNumber(clearString)}`;
   input.value = input.value !== '' ? finalString : '';
 };

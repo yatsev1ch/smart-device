@@ -10,6 +10,7 @@
   overflow: auto;
 
   @media (max-width: $tbl-breakpoint) {
+    position: absolute;
     min-height: $tbl-header-height;
     max-height: $tbl-header-offset;
   }

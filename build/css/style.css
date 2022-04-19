@@ -1570,6 +1570,7 @@ template {
   }
 
   .page-header {
+    position: absolute;
     min-height: 100px;
     max-height: 186px;
   }
