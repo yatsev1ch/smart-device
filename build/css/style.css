@@ -518,6 +518,15 @@ template {
   margin-right: 49px;
 }
 
+.form input[type="checkbox"] {
+  position: relative;
+  top: 31px;
+  left: 7px;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
 .form input[type="checkbox"] + label {
   display: block;
   cursor: pointer;
@@ -1555,6 +1564,11 @@ template {
     margin-right: 84px;
   }
 
+  .form input[type="checkbox"] {
+    top: 25px;
+    left: 8px;
+  }
+
   .form input[type="checkbox"] + label {
     padding: 10px 12px 12px 26px;
   }
@@ -1879,6 +1893,13 @@ template {
     min-width: 270px;
     width: 100%;
     margin-bottom: 15px;
+  }
+
+  .form input[type="checkbox"] {
+    top: 24px;
+    left: 13px;
+    -ms-flex-preferred-size: 3px;
+    flex-basis: 3px;
   }
 
   .form input[type="checkbox"] + label {

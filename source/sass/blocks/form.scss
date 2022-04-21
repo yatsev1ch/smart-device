@@ -99,6 +99,24 @@
   }
 }
 
+.form input[type="checkbox"] {
+  position: relative;
+  top: 31px;
+  left: 7px;
+  order: 1;
+
+  @media (max-width: $tbl-breakpoint) {
+    top: 25px;
+    left: 8px;
+  }
+
+  @media (max-width: $mbl-breakpoint) {
+    top: 24px;
+    left: 13px;
+    flex-basis: 3px;
+  }
+}
+
 .form input[type="checkbox"] + label {
   display: block;
   cursor: pointer;
